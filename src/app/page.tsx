@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label";
 import { FacultyCard } from "@/components/faulty"
 import { Navbar } from '@/components/navbar';
 import { ProcessStep } from '@/components/process-step';
+import Link from 'next/link';
 
 interface FacultyMember {
   name: string;
@@ -62,7 +63,12 @@ const facultyData: FacultyMember[] = [
 const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-purple-50">
+      <div className='hidden md:flex'>
       <Navbar />
+      </div>
+      <div className='flex md:hidden'>
+      <Link href="/exam-details"><Button>Exam Details</Button></Link>  
+      </div>
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
