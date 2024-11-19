@@ -106,7 +106,7 @@ const ExamDetailsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-purple-50">
-        <div className='hidden md:flex'>
+        <div className='hidden md:inline'>
       <Navbar />
       </div>
       <div className='flex md:hidden bg-purple-400'>
