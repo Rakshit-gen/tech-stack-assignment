@@ -5,11 +5,10 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Card, CardContent } from "@/components/ui/card";
+
 import { Star, Check } from 'lucide-react';
 import Link from 'next/link';
 

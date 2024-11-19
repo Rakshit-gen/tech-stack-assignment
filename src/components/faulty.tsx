@@ -1,26 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
-import { PricingCard } from '@/components/pricingcard';
-import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
 
+import Image from "next/image";
 interface FacultyMember {
   name: string;
   credentials: string;
@@ -30,7 +10,7 @@ interface FacultyMember {
 export const FacultyCard: React.FC<FacultyMember> = ({ name, credentials, role, experience }) => (
     <div className="relative group">
       <div className="bg-white rounded-2xl overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-        <img
+        <Image
           src={"/medical.jpg"}
           alt={name}
           className="w-full object-cover aspect-square"
