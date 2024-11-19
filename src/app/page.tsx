@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
+import { PricingCard } from '@/components/pricingcard';
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -7,74 +8,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-
-// Add this interface above the component definitions
-interface PricingFeature {
-  title: string;
-  included: boolean;
-}
-
-// Add this component before the LandingPage component
-export const PricingCard: React.FC<{
-  title: string;
-  price: string;
-  features: PricingFeature[];
-  isPopular?: boolean;
-}> = ({ title, price, features, isPopular }) => (
-  <Card className={`relative ${isPopular ? 'border-purple-500 border-2' : ''}`}>
-    {isPopular && (
-      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-        <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">
-          Popular Choice
-        </span>
-      </div>
-    )}
-    <CardContent className="p-6">
-      <div className="text-center mb-6">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <div className="flex justify-center items-baseline gap-1">
-          <span className="text-3xl font-bold">${price}</span>
-          <span className="text-gray-600">/month</span>
-        </div>
-      </div>
-      
-      <div className="space-y-4">
-        {features.map((feature, index) => (
-          <div key={index} className="flex items-center gap-2">
-            {feature.included ? (
-              <Check className="w-5 h-5 text-purple-500" />
-            ) : (
-              <div className="w-5 h-5" />
-            )}
-            <span className={feature.included ? 'text-gray-900' : 'text-gray-400'}>
-              {feature.title}
-            </span>
-          </div>
-        ))}
-      </div>
-      
-      <Button 
-        className={`w-full mt-6 ${
-          isPopular ? 'bg-purple-500 hover:bg-purple-600' : 'bg-gray-900 hover:bg-gray-800'
-        }`}
-      >
-        Get Started
-      </Button>
-    </CardContent>
-  </Card>
-);
+import { FacultyCard } from "@/components/faulty"
+import { Navbar } from '@/components/navbar';
+import { ProcessStep } from '@/components/process-step';
 
 interface FacultyMember {
   name: string;
@@ -89,32 +29,7 @@ interface ProcessStepProps {
   className?: string;
 }
 
-const FacultyCard: React.FC<FacultyMember> = ({ name, credentials, role, experience }) => (
-  <div className="relative group">
-    <div className="bg-white rounded-2xl overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-      <img
-        src={"/medical.jpg"}
-        alt={name}
-        className="w-full object-cover aspect-square"
-      />
-      <div className="p-4">
-        <h3 className="font-semibold text-lg">{name}</h3>
-        <p className="text-sm text-gray-600">{credentials}</p>
-        <p className="text-sm text-gray-600">{role}</p>
-        <p className="text-sm text-gray-600">{experience} years of teaching</p>
-      </div>
-    </div>
-  </div>
-);
 
-const ProcessStep: React.FC<ProcessStepProps> = ({ icon, title, className = "" }) => (
-  <div className={`flex flex-col items-center ${className}`}>
-    <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-2">
-      {icon}
-    </div>
-    <p className="text-sm text-center">{title}</p>
-  </div>
-);
 
 const facultyData: FacultyMember[] = [
   {
@@ -143,62 +58,6 @@ const facultyData: FacultyMember[] = [
   },
 ];
 
-const Navbar: React.FC = () => {
-  return (
-    <header className="border-b bg-white sticky top-0 z-50">
-      <div className="w-full bg-purple-500 text-white p-2 text-center">
-        <p>Earn free CE credit by answering practice questions</p>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-purple-500 rounded-full" />
-              <span className="text-xl font-bold text-purple-600">Board Master</span>
-            </div>
-            
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-48 gap-2 p-4">
-                      <li>Question Banks</li>
-                      <li>Study Guides</li>
-                      <li>Practice Tests</li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-48 gap-2 p-4">
-                      <li>Study Tips</li>
-                      <li>Blog</li>
-                      <li>Community</li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Button variant="link" className="text-gray-600">Pricing</Button>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Button variant="link" className="text-gray-600">Contact</Button>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <Button variant="ghost">Log in</Button>
-            <Button className="bg-purple-500 hover:bg-purple-600">Purchase Now</Button>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-};
 
 const LandingPage: React.FC = () => {
   return (
