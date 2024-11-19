@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import {
   Card,
@@ -146,7 +147,7 @@ const ExamDetailsPage: React.FC = () => {
             <p className="text-gray-600">
               The Certified Hospice and Palliative Nurse (CHPN®) exam is a specialized certification for
               registered nurses dedicated to providing care for patients facing terminal illnesses. Earning this
-              advanced credential validates a nurse's expertise in end-of-life care, encompassing complex symptom
+              advanced credential validates a nurses expertise in end-of-life care, encompassing complex symptom
               management, emotional support, and the nuanced delivery of palliative care through the
               advanced stages of illness. This certification not only reflects a high standard of competency in
               hospice and palliative nursing but also represents a commitment to upholding quality of life as a
@@ -335,7 +336,7 @@ const ExamDetailsPage: React.FC = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-4">Online Application</h3>
                   <p className="text-gray-600">
-                    Visit the testing center's website and complete your online application. Make sure to verify all the information before submission.
+                    Visit the testing centers website and complete your online application. Make sure to verify all the information before submission.
                   </p>
                 </CardContent>
               </Card>
@@ -353,7 +354,7 @@ const ExamDetailsPage: React.FC = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-4">Scheduling An Exam</h3>
                   <p className="text-gray-600">
-                    Once your application has been confirmed, you'll receive instructions on how to schedule your exam at an authorized testing center.
+                    Once your application has been confirmed, you will receive instructions on how to schedule your exam at an authorized testing center.
                   </p>
                 </CardContent>
               </Card>
