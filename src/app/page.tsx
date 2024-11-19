@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import {
@@ -357,7 +358,7 @@ const LandingPage: React.FC = () => {
             </div>
             <h2 className="text-2xl font-bold mb-2">7 days trial with 100% money back</h2>
             <p className="text-purple-100">
-              If you're not satisfied with our platform, get a full refund within 7 days
+              If you are not satisfied with our platform, get a full refund within 7 days
             </p>
           </div>
         </div>
@@ -457,7 +458,7 @@ const LandingPage: React.FC = () => {
               </AccordionTrigger>
               <AccordionContent className="text-gray-600">
                 Yes! You can earn continuing education (CE) credits while preparing for your exam. 
-                Our practice questions are accredited, and you'll receive CE certificates upon 
+                Our practice questions are accredited, and you will receive CE certificates upon 
                 completing question sets and assessments.
               </AccordionContent>
             </AccordionItem>
@@ -481,8 +482,8 @@ const LandingPage: React.FC = () => {
                 </span>
               </AccordionTrigger>
               <AccordionContent className="text-gray-600">
-                We offer a 100% pass guarantee. If you don't pass your exam after completing our 
-                course, we'll extend your access for free until you do. Terms and conditions apply.
+                We offer a 100% pass guarantee. If you dont pass your exam after completing our 
+                course, we will extend your access for free until you do. Terms and conditions apply.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
