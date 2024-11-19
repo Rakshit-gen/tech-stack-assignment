@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import Image from "next/image";
 interface FacultyMember {
   name: string;
   credentials: string;
@@ -10,7 +9,7 @@ interface FacultyMember {
 export const FacultyCard: React.FC<FacultyMember> = ({ name, credentials, role, experience }) => (
     <div className="relative group">
       <div className="bg-white rounded-2xl overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-        <Image
+        <img
           src={"/medical.jpg"}
           alt={name}
           className="w-full object-cover aspect-square"
