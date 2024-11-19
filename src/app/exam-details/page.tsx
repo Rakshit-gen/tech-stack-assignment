@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Check, FileText, Calendar, Clock, DollarSign } from "lucide-react";
+import { Navbar } from "@/components/navbar";
 
 interface ExamSectionProps {
   title: string;
@@ -104,6 +105,7 @@ const ExamDetailsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-purple-50">
+        <Navbar></Navbar>
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
