@@ -15,7 +15,6 @@ import { Label } from "@/components/ui/label";
 import { FacultyCard } from "@/components/faulty"
 import { Navbar } from '@/components/navbar';
 import { ProcessStep } from '@/components/process-step';
-import Link from 'next/link';
 
 interface FacultyMember {
   name: string;
