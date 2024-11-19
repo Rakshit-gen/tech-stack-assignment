@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Check } from 'lucide-react';
+import Link from 'next/link';
 
 export const Navbar = () => {
   return (
@@ -48,6 +49,9 @@ export const Navbar = () => {
                       <li>Community</li>
                     </ul>
                   </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/exam-details"><Button variant="link" className="text-gray-600">Exam Details</Button></Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Button variant="link" className="text-gray-600">Pricing</Button>
