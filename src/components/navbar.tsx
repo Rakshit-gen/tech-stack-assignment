@@ -24,7 +24,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-purple-500 rounded-full" />
-              <span className="text-xl font-bold text-purple-600">Board Master</span>
+              <span className="text-xl font-bold text-purple-600"><Link href="/">Board Master</Link></span>
             </div>
             
             <NavigationMenu>
